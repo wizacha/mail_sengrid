@@ -20,7 +20,7 @@ $chunk = array_chunk($file, 1000);
 $sendgrid = new SendGrid($arg['sendgrid-key']);
 
 array_map(
-    function($emails) use ($content, $sendgrid, $arg) {
+    function($emails) use ($sendgrid, $arg) {
         $email = new \SendGrid\Email();
         $email
             ->setSmtpapiTos($emails)
